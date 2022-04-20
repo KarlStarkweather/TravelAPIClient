@@ -1,0 +1,14 @@
+@model TravelAPIClient.Models.Destination
+<h1>Delete Destination:</h1>
+<ol>
+    <ul>
+        <li>ID: @Model.DestinationID</li>
+        <li>Name: @Model.Name</li>
+        <li>City: @Model.City</li>
+        <li>Country: @Model.Country</li>
+    </ul>
+</ol>
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Delete Destination" class="btn btn-danger" />
+}

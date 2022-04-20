@@ -1,0 +1,13 @@
+@model TravelAPIClient.Models.Destination
+<h1>Destination Details:</h1>
+@Html.ActionLink("Edit this destination", "Edit", new { id = @Model.DestinationID})
+<br> 
+@Html.ActionLink("Delete destination", "Delete", new { id = @Model.DestinationID})
+<ol>
+    <ul>
+        <li>ID: @Model.DestinationID</li>
+        <li>Name: @Model.Name</li>
+        <li>City: @Model.City</li>
+        <li>Country: @Model.Country</li>
+    </ul>
+</ol>

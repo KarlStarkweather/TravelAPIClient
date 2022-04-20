@@ -1,0 +1,22 @@
+<h1>All Destinations:</h1>
+@Html.ActionLink("Add new destination", "Create", "Destinations")
+<ol>
+@foreach (Destination destination in Model)
+{
+    <p><strong>@destination.Name</strong></p>
+    <ul>
+        <li>ID: @destination.DestinationID</li>
+        <li>City: @destination.City</li>
+        @if (@destination.Country == null)
+        {
+        <li>Country: N/A</li>
+        }
+        else
+        {
+        <li>Country: @destination.Country</li>
+        }
+    </ul>
+    <a href="/Destinations/Details/@(destination.DestinationID)"><p>View Details</p></a>
+    <br>
+}
+</ol>
